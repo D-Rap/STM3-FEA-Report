@@ -1,0 +1,22 @@
+\contentsline {chapter}{Contents}{ii}{section*.1}
+\contentsline {chapter}{List of Figures}{iii}{section*.2}
+\contentsline {chapter}{List of Tables}{iii}{section*.3}
+\contentsline {chapter}{\chapternumberline {1}Format of technical report}{1}{chapter.1}
+\contentsline {chapter}{\chapternumberline {2}Introduction to StM3 Assignment}{2}{chapter.2}
+\contentsline {section}{\numberline {2.1}Aims/Scope of project}{2}{section.2.1}
+\contentsline {section}{\numberline {2.2}Description of wing torque box}{3}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Boundary and loading conditions}{3}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Geometric properties of structural elements}{6}{subsection.2.2.2}
+\contentsline {chapter}{\chapternumberline {3}Finite Element Model}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Pre-processing steps}{7}{section.3.1}
+\contentsline {chapter}{\chapternumberline {4}Analytical Wing Sizing Calculations}{8}{chapter.4}
+\contentsline {section}{\numberline {4.1}Initial wing sizing calculations}{8}{section.4.1}
+\contentsline {chapter}{\chapternumberline {5}Results of Finite Element Model}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}Results from Exercise \#1}{9}{section.5.1}
+\contentsline {section}{\numberline {5.2}Verification against Analytical Solutions}{9}{section.5.2}
+\contentsline {section}{\numberline {5.3}Discussion of Results}{9}{section.5.3}
+\contentsline {section}{\numberline {5.4}Improvements to FE Design - Inspection hole analysis}{10}{section.5.4}
+\contentsline {chapter}{\chapternumberline {6}Conclusions and Future Work}{11}{chapter.6}
+\contentsline {chapter}{Bibliography}{12}{section*.5}
+\contentsline {appendix}{\chapternumberline {A}MSC Nastran .bdf file}{13}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Analytical Calculations}{14}{appendix.B}
