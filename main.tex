@@ -240,12 +240,12 @@ Ribs                 & 1.0         &  \\
     \label{fig:ex.1-bdf}
 \end{figure}
 
-    \item (Mesh details - element types and formulations, number of elements, quality checks), see Table \ref{tab:summary-mesh}.
+    \item The mesh on the skin (this included ribs, spars, upper and lower skin.) were meshed using CQUAD4 elements as they are 2D shell. The rectangular shape mesh was suitable in this case because of the load case and the boundary conditions. The torque box was fixed at the root and only one load acted at a point load in y direction. The 1D CBEAM element was used for the angle caps to model the L-shape support on 4 corners.  Number of element was chosen so that the load can be put accurate onto a node and that the mesh is fine enough to represent a reliable model. The number of elements and their aspect ratio can be seen in  Table \ref{tab:summary-mesh}.
 \end{enumerate}
 
 \begin{table}[h]
 \centering
-\vspace{-2cm}
+
 \caption{Summary of element types and aspect ratios assigned to each structural entity}
 \label{tab:summary-mesh}	
 \begin{tabular}{lccccc}
@@ -266,7 +266,6 @@ Total              &    -   &    600    &     10140    &       -           &    
 \chapter{Analytical Wing Sizing Calculations}\label{chap:hand-calcs}
 \section{Initial wing sizing calculations}
 \begin{enumerate}
-	\item State all key assumptions, equations and simplifications. 
 	\item Include an annotated sketch of the equivalent torque box and boom idealisation.
 	\item You may tabulate the results directly from a working excel spreadsheet or Matlab script. However, place key calculations in the Appendix not in the main body of text. 
 \end{enumerate}
@@ -350,9 +349,9 @@ Total              &    -   &    600    &     10140    &       -           &    
 		            & UPR TE   & UPR skin & TE spar  & LWR skin & LWR TE  & Max tip  \\
 		            & col. bkl.& buckling & buckling & tension  & tension & deflect. \\
 		\midrule
-		FE          &  RF val  &  RF val  &  RF val  &  RF val  & RF val  &  (mm)   \\
+		FE          &  1.266  &  0.622  &  0.823  &  2.616 & 1.533  &  20.2 mm.   \\
 		\midrule
-		Analytical  &  RF val  &  RF val  &  RF val  &  RF val  & RF val  &  (mm)   \\
+		Analytical  &  1.316  &  0.798  &  0.861  &  3.707  & 1.777  &  26.2 mm.   \\
 		\bottomrule
 	\end{tabular}
 \end{center}
@@ -366,8 +365,7 @@ Total              &    -   &    600    &     10140    &       -           &    
 
 \section{Improvements to FE Design - Inspection hole analysis}
 \begin{enumerate}
-	\item Discuss the geometry creation, namely how to partition the geometry and create the inspection holes cuts.
-	\item Present images of the von Mises stress field on the lower skin without and with inspection holes. Discuss differences.
+	%\item Present images of the von Mises stress field on the lower skin without and with inspection holes. Discuss differences.
 	\item Calculate the stress concentration factor on each inspection hole. Present results in a table.
 	\item Present a graph showing the distribution of stress in a chord-wise direction on an inspection hole. Discuss stress concentration around a hole.
 	\item Discuss the re-distribution of stress after including the inspection holes. How has the stress been distributed in the skin/booms?
@@ -385,7 +383,7 @@ Total              &    -   &    600    &     10140    &       -           &    
         \end{figure}
         The surfaces were created  in this panel apart from inside the circle; this created a hole.
     \end{itemize}
-    \item Figure \ref{fig:von-misses-holes} and \ref{fig:von-misses-w/o-holes} show the von Misses stress distribution along the lower skin in the case with and without the inspection holes.
+    \item Figure \ref{fig:von-misses-holes} and \ref{fig:von-misses-w/o-holes} show the von Misses stress distribution along the lower skin in the case with and without the inspection holes. Without the hole, the max. stress is on the root corner furthest from where the load was applied. However, when the hole is present, the max. stress is around the hole. 
     \begin{figure}[h]
         \centering
         \includegraphics[width = .8\textwidth]{figures/stress-distribution.png}
