@@ -38,9 +38,9 @@
 }
 %
 \usepackage{textcase}
-\newcommand{\theauthor}{\href{your.email@bristol.ac.uk}{Your name}}
-\newcommand{\studentid}{ab12345}
-\newcommand{\tutor}{\href{tutor.email@bristol.ac.uk}{Tutor name}}
+\newcommand{\theauthor}{\href{dp16812@my.bristol.ac.uk}{Dharapa Pattanakul}}
+\newcommand{\studentid}{dp16812}
+\newcommand{\tutor}{\href{brano.titurus@bristol.ac.uk}{Brano Titurus}}
 \newcommand{\coursetitle}{Structures \& Materials 3}
 \newcommand{\thetitle}{Metallic Wing Torque Box\\Assignment Report}
 \newcommand{\subtitle}{\sffamily\textls[200]{\MakeTextUppercase{Stress Analysis using MSC Patran/Nastran}}\normalfont}
@@ -58,7 +58,9 @@
 % Frontpage:
 \renewcommand{\abstractname}{Summary}
 \begin{abstract}
-	Summary should be written in simple language (avoiding core technical terms) clearly stating the objective of the analysis, main conclusions and recommendations. It is meant for managers, decision makers and team members involved in the project who either do not have sufficient time to go through the complete report or are not familiar with FEA terminology. 
+	%Summary should be written in simple language (avoiding core technical terms) clearly stating the objective of the analysis, main conclusions and recommendations. It is meant for managers, decision makers and team members involved in the project who either do not have sufficient time to go through the complete report or are not familiar with FEA terminology.
+	The finite element model of the wing torque box was modelled and analysed using the software MSC PATRAN and NASTRAN . The model was compared to the analytical calculation and the results concluded that the FE model can reliably performs modelling analysis for this case. The difference in the results was acceptable as the deflection of 6 mm is small relative to the size of the wing. The model with inspection holes in the bottom skin does not affects the deflection calculated using FE in a scale that needs to be accounted for.\\ \\
+	The recommendations for improvements include using a finer mesh for FE model and accounting for nonlinear behaviours in load case, material properties and deformations to represent the problem more accurately.
 \end{abstract}
 
 \clearpage
@@ -72,40 +74,40 @@
 \chapterstyle{reparticle}
 \pagestyle{ruled}
 
-\chapter{Format of technical report}
+%\chapter{Format of technical report}
 
-The final report will be submitted online via SAFE as a PDF, no hardcopy necessary!
-A report template is available on Blackboard. You may use either Microsoft Word, or \LaTeX. Technical report should include:
-	\begin{enumerate}
-		\item \textbf{Title or front page of report:} The title of the project, a nice small figure of the component, a report number, date of submission, name of supervisor, name of analyst (student), student contact details and affiliation.
-		\item \textbf{Summary (maximum 1 page) of the project:} A summary should be written in simple language (avoiding core technical terms) clearly stating the objective of the analysis, main conclusions and recommendations. It is meant for managers, decision makers and team members involved in the project who either do not have sufficient time to go through the complete report or are not familiar with FEA terminology.
-		\item \textbf{Main body of work:}
-		\begin{enumerate}
-			\item Aims/Scope of project.
-			\item Brief description of component, basic design details, functionality.
-			\item Methodology or strategy of analysis.
-			\item Mesh details (element types used, number of elements etc.), quality checks.
-			\item Material and sectional properties.
-			\item Boundary conditions details with separate figure corresponding to the appropriate load case.
-			\item Tabular results and clear figures of appropriate load case.
-		\end{enumerate}
-		\item \textbf{Conclusion and future work}
-	\end{enumerate}
+%The final report will be submitted online via SAFE as a PDF, no hardcopy necessary!
+%A report template is available on Blackboard. You may use either Microsoft Word, or \LaTeX. Technical report should include:
+	%\begin{enumerate}
+	%	\item \textbf{Title or front page of report:} The title of the project, a nice small figure of the component, a report number, date of submission, name of supervisor, name of analyst (student), student contact details and affiliation.
+	%	\item \textbf{Summary (maximum 1 page) of the project:} A summary should be written in simple language (avoiding core technical terms) clearly stating the objective of the analysis, main conclusions and recommendations. It is meant for managers, decision makers and team members involved in the project who either do not have sufficient time to go through the complete report or are not familiar with FEA terminology.
+		%\item \textbf{Main body of work:}
+		%\begin{enumerate}
+		%	\item Aims/Scope of project.
+		%	\item Brief description of component, basic design details, functionality.
+		%	\item Methodology or strategy of analysis.
+		%	\item Mesh details (element types used, number of elements etc.), quality checks.
+		%	\item Material and sectional properties.
+		%	\item Boundary conditions details with separate figure corresponding to the appropriate load case.
+		%	\item Tabular results and clear figures of appropriate load case.
+		%\end{enumerate}
+		%\item \textbf{Conclusion and future work}
+	%\end{enumerate}
 
-Documentation and local data storage/backup of all relevant models and results are essential.  
+%Documentation and local data storage/backup of all relevant models and results are essential.  
 
 \chapter{Introduction to StM3 Assignment}\label{chap:intro}
 \section{Aims/Scope of project}
 \begin{enumerate}
-	\item Explain in a few paragraphs the motivation for carrying out this work. 
-	\item Discuss relevance of 2nd year AVDASI2 course module.
+	\item This exercise was carried out to gain a better understanding of finite element analysis modelling and to investigate the differences between analytical results and finite element results. 
+	\item The model was compared to the AVDASI 2 wing project calculation. The real model of this torque box was made as a part of AVDASI 2 unit and by carrying out this exercises and compares the computational results, analyticl results and the actual test that was carried out in AVDASI 2, this provides  good insight in to differences and limitations of the theoretical prediction and the real world experiments.
 \end{enumerate}
 %
-\begin{quote}
-...the aim of this assignment is for you to broaden your FE skills and have practical experience tackling a \textbf{real-world exercise} by using an aerospace industry-standard, FE software package; MSC Patran/Nastran. A useful reference is a peer-reviewed journal paper by Ostegaard et al.~on the application of virtual testing of aircraft structures using non-linear finite element models \cite{ostergaard2011virtual}...
+%\begin{quote}
+%...the aim of this assignment is for you to broaden your FE skills and have practical experience tackling a \textbf{real-world exercise} by using an aerospace industry-standard, FE software package; MSC Patran/Nastran. A useful reference is a peer-reviewed journal paper by Ostegaard et al.~on the application of virtual testing of aircraft structures using non-linear finite element models \cite{ostergaard2011virtual}...
 
-...to realise this goal, a finite element model of a wing torque box is developed based on a generic design from AVDASI 2, see Fig.~\ref{fig:ASD2-DBT-Wing-5-revised}, and perform a linear static stress analysis to assess its structural performance (by calculating deflections and stresses)...
-\end{quote}
+%...to realise this goal, a finite element model of a wing torque box is developed based on a generic design from AVDASI 2, see Fig.~\ref{fig:ASD2-DBT-Wing-5-revised}, and perform a linear static stress analysis to assess its structural performance (by calculating deflections and stresses)...
+%\end{quote}
 
 \begin{figure}
   \includegraphics[width=\textwidth]{ASD2-DBT-Wing-5-revised-2018.pdf}
@@ -116,10 +118,11 @@ Documentation and local data storage/backup of all relevant models and results a
 \section{Description of wing torque box}
 
 \begin{enumerate}
-	\item Provide a brief description of component, basic design details, and functionality.
+	\item The wing torque box as highlighted in blue is made of aluminium sheet. The box is a long hollow and slender body with a rib every 250 mm and L-shape angle supports in 4 corners.  
 \end{enumerate}
 %
-\begin{quote} ...a representative CAD model of a generic torque box (TB) prototype is shown in Fig.~\ref{fig:wing-cad-model}. Key structural features are: 
+
+\begin{quote} A CAD model of a generic torque box (TB) prototype is shown in Fig.~\ref{fig:wing-cad-model}. Key structural features are: 
 
 \begin{itemize}
 \item \textbf{Spars} Vertical elements running along the wingspan. They have the main function of carrying the shear force; 
@@ -147,6 +150,7 @@ Although several simplifications have been made (e.g.~absence of LE droop-nose a
 \end{figure}
 
 \subsection{Boundary and loading conditions} 
+\label{BD}
 The torque box is idealised as a cantilever beam with an offset load, as illustrated in Fig. \ref{fig:ASD2-DBT-Wing-TB-Loading-Boundary}. Only one load case shall be considered, where the value of \mbox{$P = 1.0$ kN}. 
 To best mimic the structural root attachments from AVDASI2, the following boundary conditions (BCs) are suggested:
 \begin{description}
@@ -169,15 +173,15 @@ To best mimic the structural root attachments from AVDASI2, the following bounda
 \clearpage
 \subsection{Geometric properties of structural elements}
 
-Table \ref{tab:wing-size} gives the dimensions of key structural elements of the torque box that should be employed in the sectional properties definition of the finite element model, as illustrated in Fig.~\ref{fig:wing-cad-model-view}.
+Table \ref{tab:wing-size} gives the dimensions of key structural elements of the torque box that should be employed in the sectional properties definition of the finite element model, as illustrated in Fig.~\ref{fig:ASD2-DBT-Wing-5-revised}.
 
-\begin{figure}
-    \begin{center}
-    \includegraphics[scale=1.0]{wing-cad-model-view.pdf}
-    \caption{Cross-section of the wing torque box showing key structural features: skin, stringers and spars.}
-    \label{fig:wing-cad-model-view}
-    \end{center}
-\end{figure}
+%\begin{figure}
+    %\begin{center}
+    %\includegraphics[scale=1.0]{wing-cad-model-view.pdf}
+    %\caption{Cross-section of the wing torque box showing key structural features: skin, stringers and spars.}
+    %\label{fig:wing-cad-model-view}
+    %\end{center}
+%\end{figure}
 
 Spar cap angles are composed of L profiles cross-sectional areas. 
 
@@ -265,11 +269,7 @@ Total              &    -   &    600    &     10140    &       -           &    
 
 \chapter{Analytical Wing Sizing Calculations}\label{chap:hand-calcs}
 \section{Initial wing sizing calculations}
-\begin{enumerate}
-	\item Include an annotated sketch of the equivalent torque box and boom idealisation.
-	\item You may tabulate the results directly from a working excel spreadsheet or Matlab script. However, place key calculations in the Appendix not in the main body of text. 
-\end{enumerate}
-
+	%\item You may tabulate the results directly from a working excel spreadsheet or Matlab script. However, place key calculations in the Appendix not in the main body of text. 
 \begin{enumerate}
     \item Key assumptions,
     \begin{itemize}
@@ -278,12 +278,33 @@ Total              &    -   &    600    &     10140    &       -           &    
         \item  Assume only the skin area get stabilised by the corner flanges when estimate the effective end load.
         \item Reduce the stabilised web and angle blade areas by one third to avoid overestimating the second moment of area contribution of the spar web and angle blade to the box.
     \end{itemize}
+    \item The equivalent torque box is shown in figure \ref{fig:box}. The idealisation booms are also shown in figure \ref{fig:UPR-boom} and figure \ref{fig:LWP-boom}. 
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width = .7\textwidth]{figures/box.png}
+        \caption{equivalent torque box}
+        \label{fig:box}
+    \end{figure}
+    \begin{figure}[!hbt]
+    \begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[width = \textwidth]{figures/boom-1.png}
+    \caption{Upper boom idealised}
+    \label{fig:UPR-boom}
+    \end{minipage}%
+    \begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[width = \textwidth]{figures/boom-2.png}
+    \caption{Lower boom idealised}
+    \label{fig:LWP-boom}
+    \end{minipage}
+\end{figure}
 \end{enumerate}
 
 \chapter{Results of Finite Element Model}\label{chap:results}
 \section{Results from Exercise \#1}
 \begin{enumerate}
-	\item Tabular results and clear figures of appropriate load case, see Table \ref{tab:summary-results}.
+	\item Table \ref{tab:summary-results} shows important results for the load case described in section 1.2.1.
 \end{enumerate}
 
 \begin{table}[h]
@@ -349,19 +370,34 @@ Total              &    -   &    600    &     10140    &       -           &    
 		            & UPR TE   & UPR skin & TE spar  & LWR skin & LWR TE  & Max tip  \\
 		            & col. bkl.& buckling & buckling & tension  & tension & deflect. \\
 		\midrule
-		FE          &  1.266  &  0.622  &  0.823  &  2.616 & 1.533  &  20.2 mm.   \\
+		FE          &  1.266  &  0.622  &  0.823  &  2.616 & 1.533  &  20.2 mm   \\
 		\midrule
-		Analytical  &  1.316  &  0.798  &  0.861  &  3.707  & 1.777  &  26.2 mm.   \\
+		Analytical  &  1.316  &  0.798  &  0.861  &  3.707  & 1.777  &  26.2 mm   \\
+		\midrule
+		Difference & 4\% & 28\% & 5\% & 42\% &16\% & 29\% \\
 		\bottomrule
 	\end{tabular}
 \end{center}
 
 \section{Discussion of Results}
+%\begin{enumerate}
+	%\item Use engineering judgement to comment on the structural integrity of the wing torque box based on your stress results and stress allowable for the aluminium material. 
+	%\item Does the FE model fully capture the structural behaviour of the wing torque-box under the loading specified?
+	%\item What are the limitations of the current 'linear static model'?
+%\end{enumerate}
+
 \begin{enumerate}
-	\item Use engineering judgement to comment on the structural integrity of the wing torque box based on your stress results and stress allowable for the aluminium material. 
-	\item Does the FE model fully capture the structural behaviour of the wing torque-box under the loading specified?
-	\item What are the limitations of the current 'linear static model'?
-\end{enumerate}	
+    \item The maximum deflection predicted of 20.2 mm be the finite element model and 26.2 mm predicted by the analytical result in acceptable. The deflection is small the for load of 1000 kN. 
+    \item The FE model yielded lower reserve factors for every parameters calculated. This can be seen clearly with the lower predicted deflection.The differences for most parameters except the lower skin tension reserve factor are small. This shows that the FE model does capture the structural behaviour as it agrees with the analytical solutions. The differences can be accounted for for the limitations of the linear static model.
+    \item The limitations of the current linear static model include,
+    \begin{itemize}
+        \item Geometry nonlinearities - if the box buckles and becomes no longer linear, the model cannot accurately predict the behaviour of the box under load.
+        \item No vibration - the model assume no vibrational response to the load applied which is not true in real world. 
+        \item The model assume a linear material which accounts to some failure in read world case.
+        \item Only works for a static case as the model does not include inertia.
+    \item However, by comparing the results from FE to those of the analytical ones, it can be seen that the FE model is good enough. The linear static model is convenient because it is fast, is available in abundant, and is well understood as it has been in use for many years.
+    \end{itemize}
+\end{enumerate}
 
 \section{Improvements to FE Design - Inspection hole analysis}
 \begin{enumerate}
@@ -412,7 +448,7 @@ Total              &    -   &    600    &     10140    &       -           &    
 \end{figure}
     \textbf{DISCUSS DIFFERENCES}
     \item Table \ref{tab:stress-conc-factor} shows stress concentration factor in each inspection hole. The table which shows calculation for this can be found in appendix \textbf{APPENDIX IT}
-    \item Figure \ref{fig:stress-along-chord-hole} and figure \ref{fig:stress-along-chord} show the stress distribution in a chord-wise direction. Figure \ref{fig:stress-along-chord-hole} shows the distribution on an inspection hole while figure \ref{fig:stress-along-chord} shows the one without.
+    \item Figure \ref{fig:stress-along-chord-hole} and figure \ref{fig:stress-along-chord} show the stress distribution in a chord-wise direction. Figure \ref{fig:stress-along-chord-hole} shows the distribution on an inspection hole while figure \ref{fig:stress-along-chord} shows the one without. The illustration of these stress cases can be seen in figure \ref{fig:von-misses-holes-zoom} and figure \ref{fig:von-misses-w/o-holes-zoom}. The two low spikes can be seen on both side of the hole just before the spar attachment and the highest peak represents the maximum stress in the case with the inspection hole. In the case without the inspection hole, the stress distribution does not show a big change and the stress is distributed evenly along the sheet.
 \end{enumerate}
 
 \begin{table}[h]
@@ -421,12 +457,12 @@ Total              &    -   &    600    &     10140    &       -           &    
     \toprule
       Hole   &  Stress concentration factor\\
      \midrule
-      1   & 2.34\\
-      2 &   3.12\\
-      3 &   2.62\\
-      4 &   2.74\\
-      5 &   5.47\\
-      6 &   1.72\\
+      1 (250mm)  & 2.34\\
+      2 (500 mm) &   3.12\\
+      3 (750 mm) &   2.62\\
+      4 (1000 mm) &   2.74\\
+      5 (1250 mm) &   5.47\\
+      6 (1500 mm) &   1.72\\
       \bottomrule
     \end{tabular}
     \caption{Stress concentration factor in each inspection hole.}
